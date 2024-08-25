@@ -1,0 +1,494 @@
+{
+	"info": {
+		"_postman_id": "4ffe4c3b-1ef8-446b-8fce-a0a8c2f23f7f",
+		"name": "movie_Library",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "37833857"
+	},
+	"item": [
+		{
+			"name": "register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/register?name=albrens007&email=albrens007@gmail.com&password=albrens007",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"register"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "albrens007"
+						},
+						{
+							"key": "email",
+							"value": "albrens007@gmail.com"
+						},
+						{
+							"key": "password",
+							"value": "albrens007"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/login?email=albrens007@gmail.com&password=albrens007",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"login"
+					],
+					"query": [
+						{
+							"key": "email",
+							"value": "albrens007@gmail.com"
+						},
+						{
+							"key": "password",
+							"value": "albrens007"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "logout",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "4|wHyyY6Qh3oEq7g6oQ9apZXXrl7C3h8BsBBGbFS8B7060001b",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/logout?Authorization=Bearer 4|wHyyY6Qh3oEq7g6oQ9apZXXrl7C3h8BsBBGbFS8B7060001b",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"logout"
+					],
+					"query": [
+						{
+							"key": "Authorization",
+							"value": "Bearer 4|wHyyY6Qh3oEq7g6oQ9apZXXrl7C3h8BsBBGbFS8B7060001b"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "movie",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "4|wHyyY6Qh3oEq7g6oQ9apZXXrl7C3h8BsBBGbFS8B7060001b",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/movie?title=title10&director=ali&genre=Comedy&release_year=2010&description=description10",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"movie"
+					],
+					"query": [
+						{
+							"key": "title",
+							"value": "title10"
+						},
+						{
+							"key": "director",
+							"value": "ali"
+						},
+						{
+							"key": "genre",
+							"value": "Comedy"
+						},
+						{
+							"key": "release_year",
+							"value": "2010"
+						},
+						{
+							"key": "description",
+							"value": "description10"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "movie",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "4|wHyyY6Qh3oEq7g6oQ9apZXXrl7C3h8BsBBGbFS8B7060001b",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/movie",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"movie"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "movie",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "4|wHyyY6Qh3oEq7g6oQ9apZXXrl7C3h8BsBBGbFS8B7060001b",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PATCH",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/movie/2?title=title updated&director=director updated&genre=genre updated&release_year=2002&description=description updated",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"movie",
+						"2"
+					],
+					"query": [
+						{
+							"key": "title",
+							"value": "title updated"
+						},
+						{
+							"key": "director",
+							"value": "director updated"
+						},
+						{
+							"key": "genre",
+							"value": "genre updated"
+						},
+						{
+							"key": "release_year",
+							"value": "2002"
+						},
+						{
+							"key": "description",
+							"value": "description updated"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "movie",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "4|wHyyY6Qh3oEq7g6oQ9apZXXrl7C3h8BsBBGbFS8B7060001b",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/movie/2",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"movie",
+						"2"
+					],
+					"query": [
+						{
+							"key": "title",
+							"value": "title updated",
+							"disabled": true
+						},
+						{
+							"key": "director",
+							"value": "director updated",
+							"disabled": true
+						},
+						{
+							"key": "genre",
+							"value": "genre updated",
+							"disabled": true
+						},
+						{
+							"key": "release_year",
+							"value": "2002",
+							"disabled": true
+						},
+						{
+							"key": "description",
+							"value": "description updated",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "rating",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "4|wHyyY6Qh3oEq7g6oQ9apZXXrl7C3h8BsBBGbFS8B7060001b",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/rating?user_id=1&movie_id=1&rating=4&review=Amazing movie !!",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"rating"
+					],
+					"query": [
+						{
+							"key": "user_id",
+							"value": "1"
+						},
+						{
+							"key": "movie_id",
+							"value": "1"
+						},
+						{
+							"key": "rating",
+							"value": "4"
+						},
+						{
+							"key": "review",
+							"value": "Amazing movie !!"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "rating",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "4|wHyyY6Qh3oEq7g6oQ9apZXXrl7C3h8BsBBGbFS8B7060001b",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/rating",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"rating"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "rating",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "4|wHyyY6Qh3oEq7g6oQ9apZXXrl7C3h8BsBBGbFS8B7060001b",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PATCH",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/rating/7?user_id=2&movie_id=2&rating=2&review=bad film",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"rating",
+						"7"
+					],
+					"query": [
+						{
+							"key": "user_id",
+							"value": "2"
+						},
+						{
+							"key": "movie_id",
+							"value": "2"
+						},
+						{
+							"key": "rating",
+							"value": "2"
+						},
+						{
+							"key": "review",
+							"value": "bad film"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "rating",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "4|wHyyY6Qh3oEq7g6oQ9apZXXrl7C3h8BsBBGbFS8B7060001b",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/rating/7",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"rating",
+						"7"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
